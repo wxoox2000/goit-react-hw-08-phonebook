@@ -13,7 +13,7 @@ export const ContactList = () => {
     }
     return contacts.filter(contact => {
       return contact.name
-        .concat(contact.phone)
+        .concat(contact.number)
         .toLowerCase()
         .includes(filter.toLowerCase());
     });
@@ -49,7 +49,7 @@ export const ContactList = () => {
           return (
             <Contact key={contact.id}>
               <p>
-                {contact.name}: {contact.phone}
+                {contact.name}: {contact.number}
               </p>
               <DeleteBtn
                 disabled={isLoading}
